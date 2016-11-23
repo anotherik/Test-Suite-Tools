@@ -1,2 +1,2 @@
 echo "Starting Prolog unit tests . . ."
-yap ./Jenkins/Prolog/unittests.pl
+swipl ./Jenkins/Prolog/unittests.pl
