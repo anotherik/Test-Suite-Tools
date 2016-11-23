@@ -1,2 +1,2 @@
-# Test-Suit-Tools
-Trying out some test suit tools
+# Test-Suite-Tools
+Trying out some test suite tools
