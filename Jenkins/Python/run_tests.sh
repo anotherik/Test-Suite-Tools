@@ -1,2 +1,2 @@
 echo "Starting tests..."
-python unit_test.py
+python ./Jenkins/Python/unit_test.py
