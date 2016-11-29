@@ -1,6 +1,6 @@
 <?php 
 
-require 'ToyMachine.php';
+require '../ToyMachine.php';
 
 class ToyMachineTest extends PHPUnit_Framework_TestCase{
 	public $toyMachineInstance;
