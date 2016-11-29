@@ -18,6 +18,12 @@ class ToyMachine{
 	public function turnWheel(){
 		$this->setToys($this->getToys() -1);
 	}
+
+	//the user turns the whell, machine dispenses 2 toys 
+	public function turnWheel2(){
+		$this->setToys($this->getToys() -3);
+	}
+
 }
 
 ?>
