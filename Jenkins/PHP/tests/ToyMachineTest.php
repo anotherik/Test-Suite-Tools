@@ -18,6 +18,13 @@ class ToyMachineTest extends PHPUnit_Framework_TestCase{
 
 		// ... we should now have 199 toys, so:
 		$this->assertEquals(199, $this->toyMachineInstance->getToys());
+
+		// ... if we turn again the wheel 
+		$this->toyMachineInstance->turnWheel();
+
+		// ... we should now have 198 toys, so:
+		$this->assertEquals(197, $this->toyMachineInstance->getToys());
+
 	}
 }
 
