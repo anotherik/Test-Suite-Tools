@@ -13,7 +13,7 @@ class TestStringMethods(unittest.TestCase):
         self.assertEqual('FOO'.lower(), 'foo')    
 
     def test_isnumber(self):
-        value_num = '25a'
+        value_num = '25'
         value_str = 'abcd'
         self.assertTrue(value_num.isdigit())
         self.assertFalse(value_str.isdigit())
