@@ -9,6 +9,15 @@ class TestStringMethods(unittest.TestCase):
         self.assertTrue('FOO'.isupper())
         self.assertFalse('Foo'.isupper())
 
+    def test_lower(self):
+        self.assertEqual('FOO'.lower(), 'foo')    
+
+    def test_isnumber(self):
+        value_num = '25'
+        value_str = 'abcd'
+        self.assertTrue(value_num.isdigit())
+        self.assertTrue(value_str.isdigit())
+
     def test_split(self):
         s = 'hello world'
         self.assertEqual(s.split(), ['hello', 'world'])
