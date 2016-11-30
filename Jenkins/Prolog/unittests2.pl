@@ -1,3 +1,6 @@
+#!/usr/bin/swipl -f -q
+:- initialization main.
+
 :- begin_tests(lists).
 :- use_module(library(lists)).
 
@@ -7,8 +10,9 @@ test(reverse) :-
 test(a) :-
         A is 2^3,
         assertion(integer(A)),
-        assertion(A == 8).
+        assertion(A == 9).
 
 :- end_tests(lists).
 
-:-    run_tests.
+main :- run_tests,
+	    halt(0).
