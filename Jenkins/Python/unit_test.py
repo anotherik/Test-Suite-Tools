@@ -16,7 +16,7 @@ class TestStringMethods(unittest.TestCase):
         value_num = '25'
         value_str = 'abcd'
         self.assertTrue(value_num.isdigit())
-        self.assertTrue(value_str.isdigit())
+        self.assertFalse(value_str.isdigit())
 
     def test_split(self):
         s = 'hello world'
