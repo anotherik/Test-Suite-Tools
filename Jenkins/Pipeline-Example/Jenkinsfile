@@ -12,9 +12,9 @@ node {
    		pwd
    }
    stage('Build'){ 
-		sh './Pipeline-Example/build.sh'
+		sh 'Jenkins/Pipeline-Example/build.sh'
    }
    stage('Test'){ 
-		sh './Pipeline-Example/test.sh'
+		sh 'Jenkins/Pipeline-Example/test.sh'
    }
 }
