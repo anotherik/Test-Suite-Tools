@@ -9,12 +9,12 @@ node {
 		git url: 'https://github.com/anotherik/Test-Suite-Tools.git'
    }
    stage('PWD'){
-   		pwd
+   		'pwd'
    }
    stage('Build'){ 
-		sh './build.sh'
+		sh './Jenkins/Pipeline-Example/build.sh'
    }
    stage('Test'){ 
-		sh './test.sh'
+		sh './Jenkins/Pipeline-Example/test.sh'
    }
 }
