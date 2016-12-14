@@ -4,6 +4,7 @@ node {
    stage 'Stage 2'
    		echo 'Hello World 2'
    stage 'stage 3'
-		time
-		echo 'Goodbye!'
+		echo 'Goodbye!' > gb.txt
+   stage 'stage 4' 
+		cat gb.txt
 }
