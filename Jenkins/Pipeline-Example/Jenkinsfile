@@ -1,10 +1,14 @@
 node {
-   stage 'Stage 1'
+   stage('Stage 1'){
    		echo 'Hello World 1'
-   stage 'Stage 2'
+   }
+   stage('Stage 2'){
    		echo 'Hello World 2'
-   stage 'stage 3'
+   }
+   stage('stage 3'){
 		echo 'Goodbye!' > gb.txt
-   stage 'stage 4' 
+   }
+   stage('stage 4'){ 
 		cat gb.txt
+   }
 }
