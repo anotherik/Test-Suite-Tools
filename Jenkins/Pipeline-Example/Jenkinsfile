@@ -5,10 +5,16 @@ node {
    stage('Stage 2'){
    		echo 'Hello World 2'
    }
-   stage('stage 3'){
-		echo 'Goodbye!' > gb.txt
+   stage('Checkout'){
+		git url: 'https://github.com/anotherik/Test-Suite-Tools.git'
    }
-   stage('stage 4'){ 
-		cat gb.txt
+   stage('PWD'){
+   		pwd
+   }
+   stage('Build'){ 
+		sh './build.sh'
+   }
+   stage('Test'){ 
+		sh './test.sh'
    }
 }
