@@ -2,17 +2,20 @@
 node { 
 	checkout scm // <1> will checkout code from source control
     stage('Build') { 
-        sh 'cd Jenkins/Pipeline-Example2 && make'  // <2> invokes the make command and will only continue if a zero exit code is returned by the command
-    	//archiveArtifacts artifacts: '**/target/*.class', fingerprint: true // <3> captures the files built matching the include pattern (**/target/*.class) and saves them to the Jenkins master for later retrieval.
+        dir ('Jenkins/Pipeline-Example2'){
+            sh 'make'  // <2> invokes the make command and will only continue if a zero exit code is returned by the command
+    	}
+        //archiveArtifacts artifacts: '**/target/*.class', fingerprint: true // <3> captures the files built matching the include pattern (**/target/*.class) and saves them to the Jenkins master for later retrieval.
     }
     stage('Test') {
         dir ('Jenkins/Pipeline-Example2'){
     	   sh 'java hello'
+           sh 'rm hello.class' 
         }
     }
     stage('Deploy') {
     	if (currentBuild.result == 'SUCCESS') {
-            echo 'Time to publish'
+            echo 'Publish step here'
         }
     }
 }
