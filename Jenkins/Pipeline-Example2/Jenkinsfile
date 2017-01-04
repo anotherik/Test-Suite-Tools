@@ -6,6 +6,7 @@ node {
     	//archiveArtifacts artifacts: '**/target/*.class', fingerprint: true // <3> captures the files built matching the include pattern (**/target/*.class) and saves them to the Jenkins master for later retrieval.
     }
     stage('Test') {
+        sh 'cd Jenkins/Pipeline-Example2'
     	sh 'java hello'
     }
     stage('Deploy') {
