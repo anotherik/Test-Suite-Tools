@@ -12,6 +12,10 @@ class TestStringMethods(unittest.TestCase):
     def test_lower(self):
         self.assertEqual('FOO'.lower(), 'foo')    
 
+    def test_islower(self):
+	self.assertTrue('ricardo'.islower())
+	self.assertFalse('RIK'.islower())	
+
     def test_isnumber(self):
         value_num = '25'
         value_str = 'abcd'
